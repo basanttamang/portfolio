@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #fbfbfd;
+  --card: #ffffff;
+  --band: #f5f5f7;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  --accent: #0071e3;
+  /* Button fill stays #0071e3 in both themes: white text on #2997ff fails AA. */
+  --accent-fill: #0071e3;
+  --border: rgb(0 0 0 / 0.08);
+  --nav: rgb(251 251 253 / 0.72);
+  --shadow: 0 4px 24px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.12);
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #000000;
+  --card: #1c1c1e;
+  --band: #161617;
+  --fg: #f5f5f7;
+  --muted: #a1a1a6;
+  --accent: #2997ff;
+  --border: rgb(255 255 255 / 0.12);
+  --nav: rgb(22 22 23 / 0.72);
+  --shadow: none;
+  --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter",
+    system-ui, sans-serif;
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-band: var(--band);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-fill: var(--accent-fill);
+  --color-line: var(--border);
+  --color-nav: var(--nav);
+  --shadow-soft: var(--shadow);
+  --shadow-lift: var(--shadow-lg);
+}
+
+html {
+  scroll-padding-top: 4rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
