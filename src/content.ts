@@ -114,12 +114,14 @@ export const contact = {
   heading: "Let's work together.",
   subheading: "Have a project in mind or just want to say hi? I'd love to hear from you.",
   // PLACEHOLDER: your real email address.
-  email: "hello@basant.dev",
+  email: "basanttamang8@gmail.com",
+  location: "Kathmandu, Nepal",
+  timeZone: "Asia/Kathmandu",
   // PLACEHOLDER: your real profile URLs.
   socials: [
-    { label: "GitHub", href: "https://github.com/your-username", icon: "github" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/your-username", icon: "linkedin" },
-    { label: "Instagram", href: "https://www.instagram.com/your-username", icon: "instagram" }
+    { label: "GitHub", href: "https://github.com/basanttamang", icon: "github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/basanttamang", icon: "linkedin" },
+    { label: "Instagram", href: "https://www.instagram.com/bashanttamang", icon: "instagram" }
   ] as const,
 };
 
