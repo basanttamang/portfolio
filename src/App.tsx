@@ -1,6 +1,7 @@
 import { MotionConfig } from "framer-motion";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Education from "./components/Education";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
@@ -21,6 +22,7 @@ export default function App() {
         <section id="about" aria-label="About" className="min-h-svh">
           <Hero />
           <About />
+          <Education />
         </section>
         <Portfolio />
         <Contact />

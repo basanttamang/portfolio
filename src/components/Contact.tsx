@@ -209,6 +209,12 @@ export default function Contact() {
           </a>
           <CopyButton text={contact.email} />
         </div>
+        <a
+          href={`tel:${contact.phone.replace(/\s/g, "")}`}
+          className="text-[17px] text-accent hover:underline"
+        >
+          {contact.phone}
+        </a>
         <ul className="flex gap-2" aria-label="Social profiles">
           {contact.socials.map((s) => {
             const Icon = socialIcons[s.icon];
